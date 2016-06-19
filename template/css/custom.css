@@ -1,0 +1,67 @@
+.my_profile .image_profile {
+	background-image: url(http://placehold.it/800x991);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.my_profile .image_profile:hover {
+	background-image: url(http://placehold.it/800x991/000000);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out; 
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+
+#header {
+	right: 0;
+	left: inherit;
+}
+#main {
+  margin-right: 275px;
+  margin-left: 0;
+}
+
+
+@media screen and (max-width: 992px){
+	#header {
+	  left: -320px;
+	  -moz-transition: -moz-transform 350ms ease;
+	  -o-transition: -o-transform 350ms ease;
+	  -webkit-transition: -webkit-transform 350ms ease;
+	  transition: transform 350ms ease;
+	}
+	#main {
+	  margin-right: 0;
+	  margin-left: 0;
+	}
+	
+	#main section.layers {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		opacity: 0;
+	}
+	#main section.layers.page_current {
+		z-index: 1;
+		opacity: 1;
+		-webkit-transition: opacity .6s ease-in-out;
+		-moz-transition: opacity .6s ease-in-out;
+		-o-transition: opacity .6s ease-in-out;
+		-ms-transition: opacity .6s ease-in-out;
+		transition: opacity .6s ease-in-out;
+	}
+}
