@@ -9,26 +9,29 @@ import { AppService } from '../../app.service';
   templateUrl: 'home.component.html'
 })
 export class HomeComponent {
-  name:String;
-  designations: String[];
-  aboutMe: String;
+
   profileImg: String;
 
+  personalDetail:any;
 
 
   constructor(public appService: AppService) {
-  	this.name = "Manish";
-  	this.designations = ["Developer","Designer"];
-  	this.aboutMe = "Lorem ipsum dolor sit amet, consectetur adipiscing elit Etiam eu cursus lectus. In ultrice s leo sed leo bibendum eu interdum urna luctus.";
-  	this.profileImg = "http://placehold.it/200x200";
+
     this.appService = appService;
+    this.personalDetail = this.appService.getPersonalDetail();
+/*    this.name = this.personalDetail.name;
+    this.designations = this.personalDetail.designations;
+    this.aboutMe = this.personalDetail.shortDescription;*/
+    this.profileImg = "http://placehold.it/200x200";
 
   }
 
 
-  sayHello(){
-    this.appService.sayHello();
-  }
 
+ 
+  
+  ngOnInit(){
+    
+  }
 
 }
