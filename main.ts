@@ -1,6 +1,7 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { AppComponent } from './app/';
+import { AppComponent , AppService} from './app/';
 
-bootstrap(AppComponent);
+
+bootstrap(AppComponent, [AppService]);
 
