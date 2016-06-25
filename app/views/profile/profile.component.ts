@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../app.service';
 
 @Component({
   moduleId: module.id,
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() {}
+  profileImg226x226: String;
+  personalDetails:any;
+
+  constructor(public appService: AppService) {
+
+    this.appService = appService;
+    this.personalDetails = this.appService.getPersonalDetail();
+    this.profileImg226x226 = "http://placehold.it/226x226";
+    
+
+  }
 
   ngOnInit() {
+
   }
 
 }

@@ -1,1 +1,49 @@
-<p>This is portfolio page</p>
+
+<section id="portfolio" class="layers">
+    <h2 style="display:none">portfolio</h2>
+    <!-- .page_content -->
+    <div class="page_content">
+        <div id="portfolios" class="portfolios">
+
+            <div class="grid-wrap">
+
+                <!-- #filters -->
+                <ul id="genre-filter" class="clearfix">
+                    <li class="label_filter">Filter</li>
+                    <li><span class="filter active" data-filter="logo posters photography webdesign">All</span></li>
+                    <li><span class="filter" data-filter="logo">Logo</span></li>
+                    <li><span class="filter" data-filter="posters">Posters</span></li>
+                    <li><span class="filter" data-filter="photography">Photography</span></li>
+                    <li><span class="filter" data-filter="webdesign">Webdesign</span></li>
+                </ul>
+                <!-- /#filters -->
+
+                <!-- #portfolioslist -->	
+                <div class="grid" id="portfoliolist">
+
+
+                    <div class="view view-first portfolio posters webdesign mix_all" data-cat="posters webdesign" *ngFor="let portfolio of portfolios" style="display:inline;opacity:1;">
+
+                        <img [src]="profileImg349x232" alt="img02"/>
+
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+                            <h4>{{portfolio.title}}</h4>
+                            <p><span class="cat-portfolio">
+                                <span *ngFor="let catg of category">{{catg}}/</span></span></p>
+
+                            <div class="portf_detail">
+                                <a [href]="profileImg200x200" data-gal ="portfolio" class="info open-imag">
+                                    <i class="fa fa-search"></i>
+                                </a>
+
+                                <a [href]="portfolio.link" class="info external open_port_detail" data-id="1">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

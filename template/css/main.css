@@ -3745,3 +3745,12 @@ img {
         display: none !important;
     }
 }
+
+
+/* custom css*/
+#resume .resume-right ul li h5{
+    border-bottom: 1px solid #cea525;
+    padding-bottom: 10px;
+    color: #444;
+    font-weight: bold;
+}
